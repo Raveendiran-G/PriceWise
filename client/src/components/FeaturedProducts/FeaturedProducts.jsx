@@ -17,7 +17,7 @@ function FeaturedProducts() {
 
     fetchProducts();
   }, []);
-   console.log(products);
+   console.log(products[0]);
   
   return (
     <section className="max-w-7xl mx-auto py-16 px-6">

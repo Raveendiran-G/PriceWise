@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
+  const lowestPrice =
+    product.prices.length > 0
+      ? Math.min(...product.prices.map((item) => item.price))
+      : 0;
+
   return (
     <div className="bg-white rounded-xl shadow-md p-4">
+
       <img
         src={product.image}
         alt={product.name}
@@ -13,8 +19,16 @@ function ProductCard({ product }) {
         {product.name}
       </h3>
 
-      <p className="text-green-600 font-semibold">
-        ₹{product.price.toLocaleString()}
+      <p className="text-gray-500">
+        {product.brand}
+      </p>
+
+      <p className="text-yellow-500 mt-2">
+        ⭐ {product.rating}
+      </p>
+
+      <p className="text-green-600 font-semibold mt-2">
+        ₹{lowestPrice.toLocaleString()}
       </p>
 
       <Link to={`/products/${product.id}`}>
@@ -22,6 +36,7 @@ function ProductCard({ product }) {
           Compare Prices
         </button>
       </Link>
+
     </div>
   );
 }
