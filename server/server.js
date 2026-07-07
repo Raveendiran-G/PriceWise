@@ -25,3 +25,7 @@ app.listen(PORT, () => {
 
 const searchRoutes = require("./src/routes/searchRoutes");
 app.use("/api/search", searchRoutes);
+
+
+const authRoutes = require("./src/routes/authRoutes");
+app.use("/api/auth", authRoutes);

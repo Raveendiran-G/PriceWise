@@ -6,16 +6,18 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import AuthPage from "./pages/Auth/AuthPage";
 
+
 function AppRoutes() {
   return (
-   <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/search" element={<SearchPage />} />
-  <Route path="/products/:id" element={<ProductPage />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/search" element={<SearchPage />} />
+      <Route path="/products/:id" element={<ProductPage />} />
 
-<Route path="/login" element={<AuthPage />} />
-<Route path="/register" element={<AuthPage />} />
-</Routes>
+      <Route path="/login" element={<AuthPage />} />
+      <Route path="/register" element={<AuthPage />} />
+      <Route path="/search" element={<SearchPage />} />
+    </Routes>
   );
 }
 

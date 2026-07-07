@@ -5,11 +5,45 @@ const products = [
     brand: "Apple",
     category: "Mobiles",
     price: 123499,
-    image: "https://picsum.photos/300?1",
+    rating: 4.8,
+    image: "https://picsum.photos/400?1",
+
+    specifications: {
+      display: "6.3-inch OLED",
+      processor: "A18 Pro",
+      ram: "8GB",
+      storage: "256GB",
+      battery: "3582mAh"
+    },
+    priceHistory: [
+  { date: "2026-06-01", price: 129999 },
+  { date: "2026-06-10", price: 127999 },
+  { date: "2026-06-20", price: 125999 },
+  { date: "2026-07-01", price: 123499 }
+],
+
     stores: [
-      { name: "Amazon", price: 123499 },
-      { name: "Flipkart", price: 124199 },
-      { name: "Croma", price: 124999 }
+      {
+        name: "Amazon",
+        price: 123499,
+        delivery: "Tomorrow",
+        offer: "10% Bank Offer",
+        link: "https://amazon.in"
+      },
+      {
+        name: "Flipkart",
+        price: 124199,
+        delivery: "2 Days",
+        offer: "Exchange Bonus",
+        link: "https://flipkart.com"
+      },
+      {
+        name: "Croma",
+        price: 124999,
+        delivery: "Today",
+        offer: "No Cost EMI",
+        link: "https://croma.com"
+      }
     ]
   },
   {
